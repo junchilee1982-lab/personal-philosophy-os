@@ -28,7 +28,7 @@ dev = [
   "build>=1.2",
   "PyYAML>=6.0",
   "ruff>=0.15",
-  "skills-ref>=0.1.1,<0.2",
+  "skills-ref>=0.1.1,<0.2; python_version >= '3.11'",
 ]
 
 [project.scripts]
