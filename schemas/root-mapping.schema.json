@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Append-only root mapping",
+  "type": "object",
+  "required": ["schema_version", "card_id", "primary_root", "secondary_roots", "candidate_roots", "status", "mapped_by", "reason", "version", "created_at", "synthetic"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "card_id": {"type": "string", "minLength": 1},
+    "primary_root": {"type": "string", "minLength": 1},
+    "secondary_roots": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "candidate_roots": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "status": {"enum": ["ai_candidate", "confirmed"]},
+    "mapped_by": {"type": "string", "minLength": 1},
+    "confirmed_by": {"type": ["string", "null"]},
+    "reason": {"type": "string", "minLength": 1},
+    "version": {"type": "integer", "minimum": 1},
+    "created_at": {"type": "string", "format": "date"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

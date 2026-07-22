@@ -1,0 +1,12 @@
+{
+  "name": "personal-philosophy-os",
+  "version": "0.1.0-alpha.1",
+  "description": "Local-first personal philosophy engine and thought-vault skill",
+  "author": {
+    "name": "Personal Philosophy OS contributors"
+  },
+  "homepage": "https://github.com/junchilee1982-lab/personal-philosophy-os",
+  "repository": "https://github.com/junchilee1982-lab/personal-philosophy-os",
+  "license": "Apache-2.0",
+  "keywords": ["personal-knowledge", "reflection", "local-first"]
+}

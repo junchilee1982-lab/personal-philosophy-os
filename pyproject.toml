@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-philosophy-os"
+version = "0.1.0a1"
+description = "Local-first, evidence-grounded personal philosophy engine and agent skill"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "Personal Philosophy OS contributors"}]
+keywords = ["agent-skill", "codex", "claude-code", "personal-knowledge", "second-brain"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: News/Diary",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "PyYAML>=6.0",
+  "ruff>=0.15",
+  "skills-ref>=0.1.1,<0.2",
+]
+
+[project.scripts]
+ppos = "personal_philosophy_os.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/junchilee1982-lab/personal-philosophy-os"
+Repository = "https://github.com/junchilee1982-lab/personal-philosophy-os"
+Issues = "https://github.com/junchilee1982-lab/personal-philosophy-os/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+personal_philosophy_os = [
+  "skill_bundle/personal-thought-vault/SKILL.md",
+  "skill_bundle/personal-thought-vault/agents/*.yaml",
+  "skill_bundle/personal-thought-vault/references/*.md",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

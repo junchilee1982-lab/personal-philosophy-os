@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/junchilee1982-lab/personal-philosophy-os/schemas/vault.schema.json",
+  "title": "Personal Philosophy OS Vault configuration",
+  "type": "object",
+  "required": ["schema_version", "engine_family", "rollout_mode", "locale", "owner", "policies"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "engine_family": {"const": "root-question-os"},
+    "rollout_mode": {"enum": ["stable", "shadow", "active"]},
+    "locale": {"type": "string", "minLength": 2},
+    "owner": {
+      "type": "object",
+      "required": ["id", "display_name"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "display_name": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "policies": {
+      "type": "object",
+      "required": ["unclassified_root", "max_secondary_roots", "human_confirmation_required", "default_read_only"],
+      "properties": {
+        "unclassified_root": {"type": "string", "minLength": 1},
+        "max_secondary_roots": {"type": "integer", "minimum": 0},
+        "human_confirmation_required": {"const": true},
+        "default_read_only": {"const": true}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

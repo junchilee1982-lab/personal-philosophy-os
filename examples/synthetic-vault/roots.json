@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "roots": [
+    {"id": "root-00", "question_zh": "待归区：现在还不知道它属于哪里", "question_en": "Unclassified: where does this belong?", "unclassified": true, "enabled": true},
+    {"id": "root-01", "question_zh": "我是谁，我愿意成为什么样的人？", "question_en": "Who am I, and who am I willing to become?", "unclassified": false, "enabled": true},
+    {"id": "root-02", "question_zh": "我如何与他人相处，同时不失去自己？", "question_en": "How do I relate to others without losing myself?", "unclassified": false, "enabled": true},
+    {"id": "root-03", "question_zh": "我如何面对痛苦、不确定和失去？", "question_en": "How do I face pain, uncertainty, and loss?", "unclassified": false, "enabled": true},
+    {"id": "root-04", "question_zh": "我如何选择，并承担选择的代价？", "question_en": "How do I choose and carry the cost of my choice?", "unclassified": false, "enabled": true},
+    {"id": "root-05", "question_zh": "我如何成长、行动和修正自己？", "question_en": "How do I grow, act, and revise myself?", "unclassified": false, "enabled": true}
+  ]
+}

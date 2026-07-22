@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Append-only verdict ledger entry",
+  "type": "object",
+  "required": ["schema_version", "object_type", "object_id", "object_version", "ledger_version", "verdict", "actor_id", "created_at", "synthetic"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "object_type": {"enum": ["mapping"]},
+    "object_id": {"type": "string", "minLength": 1},
+    "object_version": {"type": "integer", "minimum": 1},
+    "ledger_version": {"type": "integer", "minimum": 1},
+    "verdict": {"enum": ["rejected", "withdrawn"]},
+    "actor_id": {"type": "string", "minLength": 1},
+    "reason": {"type": "string"},
+    "created_at": {"type": "string", "format": "date"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

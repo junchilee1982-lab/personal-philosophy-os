@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Root question registry",
+  "type": "object",
+  "required": ["schema_version", "roots"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "roots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "question_zh", "question_en", "unclassified", "enabled"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^root-[0-9A-Za-z-]+$"},
+          "question_zh": {"type": "string"},
+          "question_en": {"type": "string"},
+          "unclassified": {"type": "boolean"},
+          "enabled": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

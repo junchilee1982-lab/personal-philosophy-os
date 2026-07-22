@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible engine or skill problem without private Vault data
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste secrets, real conversations, private Vault records, or identifying screenshots. Use synthetic examples only."
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: 0.1.0a1
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Describe the behavior using a synthetic reproduction.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Local checks
+      description: Include exit codes and sanitized diagnostics only.

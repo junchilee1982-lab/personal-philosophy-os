@@ -1,0 +1,31 @@
+{
+  "name": "personal-philosophy-os",
+  "version": "0.1.0-alpha.1",
+  "description": "Local-first personal philosophy engine and evidence-grounded thought-vault skill",
+  "author": {
+    "name": "Personal Philosophy OS contributors",
+    "url": "https://github.com/junchilee1982-lab/personal-philosophy-os"
+  },
+  "homepage": "https://github.com/junchilee1982-lab/personal-philosophy-os#readme",
+  "repository": "https://github.com/junchilee1982-lab/personal-philosophy-os",
+  "license": "Apache-2.0",
+  "keywords": ["personal-knowledge", "second-brain", "reflection", "local-first"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "个人思想库",
+    "shortDescription": "用自己的证据、原则与案例思考人生问题",
+    "longDescription": "一个本地优先的个人生命操作系统：按人生根问题组织思想，区分个人证据与外部观点，并通过复盘和辩论持续修订原则。",
+    "developerName": "Personal Philosophy OS contributors",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/junchilee1982-lab/personal-philosophy-os",
+    "privacyPolicyURL": "https://github.com/junchilee1982-lab/personal-philosophy-os/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/junchilee1982-lab/personal-philosophy-os/blob/main/LICENSE",
+    "defaultPrompt": [
+      "用个人思想库分析这个问题对应哪个人生根问题。",
+      "用我的已确认原则和证据帮我复盘这次选择。",
+      "选一条原则，用最强反方跟我辩一辩。"
+    ],
+    "brandColor": "#5B5F3A"
+  }
+}

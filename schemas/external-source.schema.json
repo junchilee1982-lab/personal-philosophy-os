@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "External thought source",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "source", "source_text", "agent_interpretation", "owner_interpretation", "root_ids", "principle_ids", "relationship", "status", "created_at", "synthetic"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "source": {"type": "string"},
+    "source_text": {"type": "string"},
+    "agent_interpretation": {"type": "string"},
+    "owner_interpretation": {"type": "string"},
+    "root_ids": {"type": "array", "items": {"type": "string"}},
+    "principle_ids": {"type": "array", "items": {"type": "string"}},
+    "relationship": {"enum": ["support", "challenge", "tool", "unverified"]},
+    "status": {"enum": ["candidate", "accepted", "rejected"]},
+    "confirmed_by": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,4 @@
+{"schema_version":1,"id":"card-0001","kind":"value","subject_id":"person:self","text":"做选择时，我愿意先写下自己能够承担的代价。","status":"confirmed","evidence_grade":"A","created_at":"2026-01-15","synthetic":true}
+{"schema_version":1,"id":"card-0002","kind":"view","subject_id":"person:self","text":"帮助别人不等于替别人承担全部责任。","status":"confirmed","evidence_grade":"A","created_at":"2026-01-15","synthetic":true}
+{"schema_version":1,"id":"card-0003","kind":"decision","subject_id":"person:self","text":"先做一个可验证的小版本，再决定是否扩大投入。","status":"confirmed","evidence_grade":"A","created_at":"2026-01-15","synthetic":true}
+{"schema_version":1,"id":"card-0004","kind":"view","subject_id":"person:self","text":"有些事情我还不知道该放在哪里，暂时不分类也可以。","status":"confirmed","evidence_grade":"A","created_at":"2026-01-15","synthetic":true}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "engine_family": "root-question-os",
+  "rollout_mode": "active",
+  "locale": "zh-CN",
+  "owner": {
+    "id": "person:self",
+    "display_name": "我"
+  },
+  "policies": {
+    "unclassified_root": "root-00",
+    "max_secondary_roots": 2,
+    "human_confirmation_required": true,
+    "default_read_only": true
+  }
+}

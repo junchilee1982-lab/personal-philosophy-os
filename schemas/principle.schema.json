@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Personal principle",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "status", "statement", "primary_root", "secondary_roots", "evidence_card_ids", "conditions", "extreme_cost", "opposing_principle_ids", "case_ids", "created_at", "synthetic"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["candidate", "confirmed", "rejected"]},
+    "statement": {"type": "string", "minLength": 1},
+    "primary_root": {"type": "string", "minLength": 1},
+    "secondary_roots": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evidence_card_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "conditions": {"type": "string"},
+    "extreme_cost": {"type": "string"},
+    "opposing_principle_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "case_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "confirmed_by": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

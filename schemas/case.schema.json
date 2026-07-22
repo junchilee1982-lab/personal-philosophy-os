@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Problem case",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "status", "subject_ids", "primary_root", "secondary_roots", "fact_summary", "responsibility", "boundary", "motivation", "cost", "action", "result", "transfer_signal", "failure_condition", "principle_ids", "created_at", "synthetic"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["candidate", "confirmed", "rejected"]},
+    "subject_ids": {"type": "array", "items": {"type": "string"}},
+    "primary_root": {"type": "string"},
+    "secondary_roots": {"type": "array", "items": {"type": "string"}},
+    "fact_summary": {"type": "string"},
+    "responsibility": {"type": "string"},
+    "boundary": {"type": "string"},
+    "motivation": {"type": "string"},
+    "cost": {"type": "string"},
+    "action": {"type": "string"},
+    "result": {"type": "string"},
+    "transfer_signal": {"type": "string"},
+    "failure_condition": {"type": "string"},
+    "principle_ids": {"type": "array", "items": {"type": "string"}},
+    "confirmed_by": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

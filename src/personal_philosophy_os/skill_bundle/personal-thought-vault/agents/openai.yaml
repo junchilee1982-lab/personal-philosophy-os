@@ -1,0 +1,6 @@
+interface:
+  display_name: "个人思想库"
+  short_description: "用自己的证据、原则与案例思考人生问题"
+  default_prompt: "Use $personal-thought-vault to analyze this question through my confirmed evidence and principles."
+policy:
+  allow_implicit_invocation: true

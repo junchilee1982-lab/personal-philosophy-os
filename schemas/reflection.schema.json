@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision reflection",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "status", "facts_known_then", "judgment_then", "action", "expected_result", "actual_result", "what_held", "what_distorted", "revision_proposal", "principle_ids", "created_at", "synthetic"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["candidate", "confirmed", "rejected"]},
+    "facts_known_then": {"type": "string"},
+    "judgment_then": {"type": "string"},
+    "action": {"type": "string"},
+    "expected_result": {"type": "string"},
+    "actual_result": {"type": "string"},
+    "what_held": {"type": "string"},
+    "what_distorted": {"type": "string"},
+    "revision_proposal": {"type": "string"},
+    "principle_ids": {"type": "array", "items": {"type": "string"}},
+    "confirmed_by": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date"},
+    "synthetic": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

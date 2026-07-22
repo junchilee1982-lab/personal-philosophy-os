@@ -1,0 +1,28 @@
+.DS_Store
+.idea/
+.vscode/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+wheelhouse/
+
+# Local-only privacy denylist; never commit its contents.
+.privacy-denylist.local
+
+# Runtime vaults and diagnostics belong outside the engine repository.
+vault-data/
+runtime-data/
+shadow/
+staging/
+transactions/
+*.log
+*.bak
+*.tmp
